@@ -1,23 +1,18 @@
+import Myrouter from "./Myrouter";
+import Chart from "./pages/Chart";
+import Home from "./pages/Home";
+import Settings from "./pages/Settings";
+import Usage from "./pages/Usage";
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Myrouter>
+        <Home path="home"/>
+        <Usage path="usage"/>
+        <Settings path="settings"/>
+        <Chart path="chart"/>
+    </Myrouter>
   );
 }
 
